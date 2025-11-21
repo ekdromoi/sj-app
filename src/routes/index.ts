@@ -16,6 +16,10 @@ app.get('/ping', (_req: Request, res: Response) => {
   res.send('pong');
 });
 
+app.get('/app', (_req: Request, res: Response) => {
+  res.render('home');
+});
+
 const listen = () => {
   const PORT = process.env.PORT || 8000;
   app.listen(PORT, () => {
